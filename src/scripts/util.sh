@@ -72,8 +72,8 @@ get_certificate() {
     fi
 
     echo "running certbot ... $letsencrypt_url $1 $2"
-    certbot certonly --agree-tos --keep -n --text --email $2 --server \
-        $letsencrypt_url -d $1 --http-01-port 1337 \
+    certbot certonly --agree-tos --keep -n --text --email $2 \
+        -d $1 --http-01-port 1337 \
         --standalone --preferred-challenges http-01 --debug
 }
 

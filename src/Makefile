@@ -8,8 +8,8 @@ endif
 all: build
 
 build: Makefile Dockerfile
-	$(DOCKER_BUILD) -t staticfloat/nginx-certbot .
+	$(DOCKER_BUILD) -t toby/nginx-certbot .
 	@echo "Done!  Use docker run staticfloat/nginx-certbot to run"
 
 push:
-	docker push staticfloat/nginx-certbot
+	docker push toby/nginx-certbot
